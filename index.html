@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: chenlong
+ * @Date: 2021-03-22 17:35:03
+ * @LastEditTime: 2021-03-23 13:53:44
+ * @LastEditors: chenlong
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,25 +42,18 @@
     <script src="./dist/comet.js"></script>
     <script>
       var canvas = document.getElementById('canvas')
-      var path = []
-      var speed = 1
-      for (let i = 1; i < 201; i++) {
-        path.push(new Comet.Point(200 + speed * i, 400 + i * speed))
-      }
-      for (let i = 1; i < 201; i++) {
-        path.push(
-          new Comet.Point(200 + speed * i + 200, 400 + -i * speed + 200)
-        )
-      }
-
-      for (let i = 1; i < 201; i++) {
-        path.push(new Comet.Point(200 - speed * i + 400, 400 + -i * speed))
-      }
-
-      for (let i = 1; i < 201; i++) {
-        path.push(new Comet.Point(200 - speed * i + 200, 200 + i * speed))
-      }
-      var comet = new Comet(canvas, { path })
+      var comet = new Comet(canvas, {
+        path: Comet.square([
+          [400, 200],
+          [600, 400],
+          [400, 600],
+          [200, 400],
+          [400, 200]
+        ]),
+        pathVisible: true,
+        pathColor: '#444444',
+        cometColor: '#66FF00',
+      })
       comet.play()
     </script>
   </body>
