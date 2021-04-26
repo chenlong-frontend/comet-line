@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: chenlong
  * @Date: 2021-03-22 17:35:03
- * @LastEditTime: 2021-04-26 10:02:42
+ * @LastEditTime: 2021-04-26 10:32:33
  * @LastEditors: chenlong
 -->
 <!DOCTYPE html>
@@ -42,20 +42,14 @@
     <script src="./dist/comet.js"></script>
     <script>
       var canvas = document.getElementById('canvas')
-      var path = Comet.square([
-          [20, 200],
-          [600, 200]
-        ])
-      console.log(path)
       var comet = new Comet(canvas, {
-        path: path,
-        // path: Comet.square([
-        //   [400, 200],
-        //   [600, 400],
-        //   [400, 600],
-        //   [200, 400],
-        //   [400, 200]
-        // ]),
+        path: Comet.square([
+          [400, 200],
+          [600, 400],
+          [400, 600],
+          [200, 400],
+          [400, 200]
+        ]),
         pathVisible: true,
         pathColor: '#444444',
         cometColor: '#66FF00',

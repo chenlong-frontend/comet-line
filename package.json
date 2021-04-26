@@ -1,6 +1,6 @@
 {
   "name": "comet-line",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "canvas comet line",
   "main": "dist/comet.min.js",
   "scripts": {
