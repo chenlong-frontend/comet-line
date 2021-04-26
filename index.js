@@ -2,7 +2,7 @@
  * @Description: comet-line
  * @Author: chenlong
  * @Date: 2021-03-22 17:03:35
- * @LastEditTime: 2021-03-23 13:53:12
+ * @LastEditTime: 2021-04-26 10:04:42
  * @LastEditors: chenlong
  */
 
@@ -22,9 +22,10 @@ function square(path) {
       pre = it
       continue
     }
-    const width = it[0] - pre[0]
-    const height = it[1] - pre[1]
-    let min = Math.min(Math.abs(width), Math.abs(height))
+    let width = it[0] - pre[0]
+    let height = it[1] - pre[1]
+    let min = Math.min(width === 0 ? Infinity : width, Math.abs(height === 0 ? Infinity : height))
+    if (min === Infinity) continue
     const wstep = width / min
     const hstep = height / min
     for (let i = 0;i < min;i++) {
